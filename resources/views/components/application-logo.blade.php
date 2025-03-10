@@ -1,3 +1,5 @@
-<svg viewBox="0 0 316 316" xmlns="http://www.w3.org/2000/svg" {{ $attributes }}>
-    <path d="logo">
-</svg>
+<div class="">
+    <img src="{{ asset('images/logo_fitpeek.svg') }}" 
+        alt="FitPeek Logo" 
+        class="h-16 w-auto object-contain" {{ $attributes }}>
+</div>

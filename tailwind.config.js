@@ -16,10 +16,10 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                "primary-color": "#A15C38",
-                "secondary-color": "#C3A6A0",
+                "primary-color": "#111110",
+                "secondary-color": "#A28879",
                 "highlight-color": "#F7F1F0",
-                "accent-color": "#",
+                "accent-color": "#515051",
             }
         },
     },
