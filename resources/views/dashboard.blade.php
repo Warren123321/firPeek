@@ -119,13 +119,46 @@
                     </div>
                 </div>
 
-                <!-- Previous Searches -->
                 <div class="max-w-6xl mx-auto space-y-8">
                     <h2 class="text-lg font-semibold mb-3 text-center lg:text-left">Previous Search</h2>
+
+                    @php
+                        $images = [
+                            asset('images/Product1.jpg'),
+                            asset('images/product2.jpg'),
+                            asset('images/product3.jpg'),
+                            asset('images/product4.jpg'),
+                            asset('images/product5.jpg'),
+                            asset('images/product6.jpg')
+                        ];
+                    @endphp
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center">
-                        @for ($i = 1; $i <= 6; $i++)
+                        @for ($i = 0; $i < count($images); $i++)
                             <div class="flex justify-center"> 
-                                <x-card image="image.jpg" text="Product {{ $i }}" price="0" />
+                                <x-card image="{{ $images[$i] }}" text="Product {{ $i + 1 }}" price="{{ rand(100, 999) }}" />
+                            </div>
+                        @endfor
+                    </div>
+                </div>
+
+                <div class="max-w-6xl mx-auto space-y-8">
+                    <h2 class="text-lg font-semibold mb-3 text-center lg:text-left mt-10">Recommended For You</h2>
+                    @php
+                        $images = [
+                            asset('images/Product1.jpg'),
+                            asset('images/product2.jpg'),
+                            asset('images/product3.jpg'),
+                            asset('images/product4.jpg'),
+                            asset('images/product5.jpg'),
+                            asset('images/product6.jpg')
+                        ];
+                    @endphp
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center">
+                        @for ($i = 0; $i < count($images); $i++)
+                            <div class="flex justify-center"> 
+                                <x-card image="{{ $images[$i] }}" text="Product {{ $i + 1 }}" price="{{ rand(100, 999) }}" />
                             </div>
                         @endfor
                     </div>
